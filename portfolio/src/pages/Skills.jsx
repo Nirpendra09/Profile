@@ -7,12 +7,16 @@ import HTML from '../img/html.svg'
 import Atom from '../img/atom.svg'
 import Java from '../img/java.svg'
 import CSS from '../img/css.svg'
+import { photoAnim, titleAnim, fade } from '../animation'
+import { motion } from 'framer-motion'
+import { useScroll } from '../components/useScroll'
 
 const Skills = () => {
+    const [element, controls] = useScroll();
     return (
-        <Services>
+        <Services variants={ fade } animate={ controls } initial="hidden" ref={ element }>
             <Description>
-                <h2>Technical <span>Skills</span></h2>
+                <motion.h2 variants={ titleAnim }>Technical <span>Skills</span></motion.h2>
                 <Cards>
                     <Card>
                         <div className="icon">
@@ -40,7 +44,7 @@ const Skills = () => {
                     </Card>
                 </Cards>
             </Description>
-            <ImageS>
+            <ImageS variants={ photoAnim }>
                 <img src={ Dev2 } alt="camera" />
             </ImageS>
         </Services>
@@ -56,19 +60,19 @@ p{
     padding: 2rem 0rem 4rem 0rem;
 }
 `;
-const ImageS = styled.div`
+const ImageS = styled(motion.div)`
 width: 20rem;
 img{
     width: 100%;
 }
 `;
 
-const Cards = styled.div`
+const Cards = styled(motion.div)`
 display: flex;
 flex-wrap: wrap;
 `;
 
-const Card = styled.div`
+const Card = styled(motion.div)`
 flex-basis: 20rem;
 .icon{
     display: flex;

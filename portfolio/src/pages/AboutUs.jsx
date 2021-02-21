@@ -4,6 +4,7 @@ import Skills from './Skills'
 //Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "./../animation";
+import ScrollTop from '../components/ScrollTop';
 
 function AboutUs() {
     return (
@@ -14,7 +15,7 @@ function AboutUs() {
             animate="show">
             <AboutSection />
             <Skills />
-
+            <ScrollTop />
         </motion.div>
     )
 }
