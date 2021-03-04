@@ -11,6 +11,9 @@ const GlobalSytle = createGlobalStyle`
 body{
     background: #1B1B1B;
     font-family: 'Inter', sans-serif;
+    @media(max-width: 768px){
+        width: 100%;
+    }
 }
 button{
     font-weight: bold;

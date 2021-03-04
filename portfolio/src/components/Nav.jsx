@@ -63,6 +63,9 @@ li{
     padding-left: 10rem;
     position: relative;
 }
+@media (max-width: 480px){
+   display: none;
+}
 `;
 const Line = styled(motion.div)`
   height: 0.3rem;
