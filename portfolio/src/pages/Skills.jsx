@@ -19,7 +19,7 @@ const Skills = () => {
                 <motion.h2 variants={ titleAnim }>Technical <span>Skills</span></motion.h2>
                 <Cards>
                     <Card>
-                        <div className="icon">
+                        <div className="icon" >
                             <img src={ HTML } alt="" />
                             <h3>HTML</h3>
                         </div>
@@ -65,6 +65,9 @@ width: 20rem;
 img{
     width: 100%;
 }
+@media screen and (max-width: 768px){
+        display: none;
+    }
 `;
 
 const Cards = styled(motion.div)`

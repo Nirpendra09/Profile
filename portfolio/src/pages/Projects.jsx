@@ -42,9 +42,14 @@ const Project = styled(motion.div)`
     min-height : 100vh;
     overflow: hidden;
     padding: 5rem;
-    @media (max-width: 1300px){
-        padding: 2rem 2rem;
-    }
+    @media (max-width: 768px) {
+        display: grid;
+        padding: 1rem;
+        width: 100%;
+        h2{
+            font-size: 1.5rem;
+        }
+  }
     h2{
         color: white;
         padding: 1rem 0rem
@@ -63,6 +68,9 @@ const Card = styled(motion.div)`
         width: 100%;
         height: 70vh;
         object-fit: cover;
+    }
+    @media (max-width: 768px){
+        padding: 2rem;
     }
 `;
 const Hide = styled.div`

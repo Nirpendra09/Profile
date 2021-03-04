@@ -8,16 +8,11 @@ align-items: center;
 justify-content: space-between;
 padding: 5rem 8rem;
 color: white;
-@media(max-width: 768px){
-    justify-content: center;
-    align-items:center;
-    width:100%;
-}
-.title{
-@media(max-width: 768px){
-    font-size: 0.5rem;
-    width: 50rem;
-}
+@media (max-width: 1300px) {
+    display: block;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
 }
 `;
 
@@ -27,9 +22,10 @@ export const Description = styled(motion.div)`
     h2{
         font-weight: lighter;
     }
-    @media(max-width: 768px){
-        width: 100%;
-
+ @media (max-width: 1300px) {
+    padding: 0;
+    button {
+      margin: 2rem 0rem 5rem 0rem;
     }
 `;
 
@@ -41,7 +37,7 @@ export const Image = styled.div`
         height: 80vh;
         object-fit: cover;
     }
-    @media(max-width: 768px){
+    @media screen and (max-width: 768px){
         display: none;
     }
 `;

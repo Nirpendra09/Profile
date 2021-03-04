@@ -7,13 +7,15 @@ const GlobalSytle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+    @media (max-width: 1700px){
+        font-size: 75%;
+    }
+    
+}
 body{
     background: #1B1B1B;
     font-family: 'Inter', sans-serif;
-    @media(max-width: 768px){
-        width: 100%;
-    }
 }
 button{
     font-weight: bold;
