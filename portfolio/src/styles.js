@@ -5,15 +5,17 @@ export const About = styled(motion.div)`
 min-height: 90vh;
 display: flex;
 align-items: center;
-justify-content: space-between;
-padding: 5rem 8rem;
+justify-content: space-evenly;
+padding: 5rem 6rem;
 color: white;
-@media (max-width: 1300px) {
-    display: block;
-    padding: 2rem 2rem;
-    text-align: center;
-  }
 }
+    @media screen && (max-width: 762x) {
+        justify-content: center;
+      }
+
+      p{
+          font-size: 1.3rem;
+      }
 `;
 
 export const Description = styled(motion.div)`
@@ -26,7 +28,7 @@ export const Description = styled(motion.div)`
     padding: 0;
     button {
       margin: 2rem 0rem 5rem 0rem;
-    }
+    } 
 `;
 
 export const Image = styled.div`

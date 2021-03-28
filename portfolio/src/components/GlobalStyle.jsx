@@ -29,7 +29,7 @@ button{
     font-family: 'Inter', sans-serif;
     &:hover{
         background-color: #23d997;
-        color:white;
+        color:#000;
     }
     
 }

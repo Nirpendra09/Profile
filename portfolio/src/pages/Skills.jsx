@@ -9,6 +9,8 @@ import Java from '../img/java.svg'
 import CSS from '../img/css.svg'
 import Git from '../img/Git.png'
 import GitHub from '../img/GitHub.png'
+import Nodejs from '../img/nodejs.svg'
+import MongoDb from '../img/mongodb-icon.svg'
 
 import { photoAnim, titleAnim, fade } from '../animation'
 import { motion } from 'framer-motion'
@@ -35,14 +37,26 @@ const Skills = () => {
                     </Card>
                     <Card>
                         <div className="icon">
+                            <img src={ Java } alt="" />
+                            <h3>Java</h3>
+                        </div>
+                    </Card>
+                    <Card>
+                        <div className="icon">
                             <img src={ Atom } alt="" />
                             <h3>ReactJS</h3>
                         </div>
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img src={ Java } alt="" />
-                            <h3>Java</h3>
+                            <img src={ Nodejs } alt="" />
+                            <h3>NodeJs</h3>
+                        </div>
+                    </Card>
+                    <Card>
+                        <div className="icon">
+                            <img src={ MongoDb } alt="" />
+                            <h3>MongoDb</h3>
                         </div>
                     </Card>
                     <Card>
@@ -79,15 +93,50 @@ const ImageS = styled(motion.div)`
 width: 20rem;
 img{
     width: 100%;
+    padding: 1rem;
 }
 @media screen and (max-width: 768px){
         display: none;
     }
+
+    @media screen and (max-width: 900px){
+        img{
+            display: none;
+        }
+    }
 `;
 
 const Cards = styled(motion.div)`
-display: flex;
-flex-wrap: wrap;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+border: 1px solid white;
+border-radius: 1rem;
+padding: 2rem;
+box-shadow: 
+       inset 0 -3em 3em rgba(0,0,0,0.1), 
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+
+@media screen and (max-width: 768px){
+         display: block;
+          border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  animation-name: example;
+  animation-duration: 0.25s;
+  border-left: 8px solid #23d997;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+&:hover{
+    border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  animation-name: example;
+  animation-duration: 0.25s;
+  border-left: 8px solid #23d997;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+ 
 `;
 
 const Card = styled(motion.div)`
@@ -95,6 +144,7 @@ flex-basis: 20rem;
 .icon{
     display: flex;
     align-items: center;
+    justify-content: center;
     h3{
         margin-left: 1rem;
         background: white;
@@ -104,9 +154,14 @@ flex-basis: 20rem;
     }
     img{
         width: 5rem;
-        padding: 1rem
+        padding: 0.5rem
     }
+
 }
+&:hover {
+    background: #343434;
+  }
+       
 `;
 
 export default Skills
