@@ -12,7 +12,7 @@ function App() {
             <GlobalStyle />
             <Nav />
             <Switch>
-                <Route path="/" exact>
+                <Route path="/Portfolio" exact>
                     <AboutUs />
                 </Route>
                 <Route path="/projects" exact>

@@ -7,6 +7,9 @@ import HTML from '../img/html.svg'
 import Atom from '../img/atom.svg'
 import Java from '../img/java.svg'
 import CSS from '../img/css.svg'
+import Git from '../img/Git.png'
+import GitHub from '../img/GitHub.png'
+
 import { photoAnim, titleAnim, fade } from '../animation'
 import { motion } from 'framer-motion'
 import { useScroll } from '../components/useScroll'
@@ -40,6 +43,18 @@ const Skills = () => {
                         <div className="icon">
                             <img src={ Java } alt="" />
                             <h3>Java</h3>
+                        </div>
+                    </Card>
+                    <Card>
+                        <div className="icon">
+                            <img src={ Git } alt="" />
+                            <h3>Git</h3>
+                        </div>
+                    </Card>
+                    <Card>
+                        <div className="icon">
+                            <img src={ GitHub } alt="" />
+                            <h3>GitHub</h3>
                         </div>
                     </Card>
                 </Cards>

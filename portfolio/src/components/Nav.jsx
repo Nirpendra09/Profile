@@ -10,7 +10,7 @@ const Nav = () => {
             <h1><Link id="logo" to='/'>MyPortfolio</Link></h1>
             <ul>
                 <li>
-                    <Link to='/'>1.About </Link>
+                    <Link to='/Portfolio'>1.About </Link>
                     <Line
                         transition={ { duration: 0.75 } }
                         initial={ { width: "0%" } }
