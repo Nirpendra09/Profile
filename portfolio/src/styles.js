@@ -24,7 +24,7 @@ export const Description = styled(motion.div)`
     h2{
         font-weight: lighter;
     }
- @media (max-width: 1300px) {
+ @media (max-width: 1200px) {
     padding: 0;
     button {
       margin: 2rem 0rem 5rem 0rem;

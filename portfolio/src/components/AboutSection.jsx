@@ -7,7 +7,6 @@ import Iam from '../img/Iam.svg'
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "./../animation";
 import Wave from "./Wave";
-import ScrollTop from './ScrollTop'
 import { useHistory } from "react-router-dom";
 
 function AboutSection() {
@@ -37,7 +36,6 @@ function AboutSection() {
                 <motion.img variants={ photoAnim } src={ Iam } alt="guy with a camera" />
             </Image>
             <Wave />
-            <ScrollTop />
         </About>
     )
 }

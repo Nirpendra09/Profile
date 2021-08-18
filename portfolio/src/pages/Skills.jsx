@@ -12,17 +12,17 @@ import GitHub from '../img/GitHub.png'
 import Nodejs from '../img/nodejs.svg'
 import MongoDb from '../img/mongodb-icon.svg'
 
-import { photoAnim, titleAnim, fade } from '../animation'
+import { photoAnim, titleAnim, fade,scrollReveal } from '../animation'
 import { motion } from 'framer-motion'
 import { useScroll } from '../components/useScroll'
 
 const Skills = () => {
     const [element, controls] = useScroll();
     return (
-        <Services variants={ fade } animate={ controls } initial="hidden" ref={ element }>
+        <Services  variants={ fade } animate={ controls } initial="hidden" ref={ element }>
             <Description>
                 <motion.h2 variants={ titleAnim }>Technical <span>Skills</span></motion.h2>
-                <Cards>
+                <Cards variants={scrollReveal} >
                     <Card>
                         <div className="icon" >
                             <img src={ HTML } alt="" />
@@ -43,20 +43,26 @@ const Skills = () => {
                     </Card>
                     <Card>
                         <div className="icon">
+                            <img src={ 'https://img.icons8.com/color/96/000000/javascript--v2.png' } alt="" />
+                            <h3>JavaScript</h3>
+                        </div>
+                    </Card>
+                    <Card>
+                        <div className="icon">
                             <img src={ Atom } alt="" />
                             <h3>ReactJS</h3>
                         </div>
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img src={ Nodejs } alt="" />
-                            <h3>NodeJs</h3>
+                            <img src={ Atom } alt="" />
+                            <h3>React Native</h3>
                         </div>
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img src={ MongoDb } alt="" />
-                            <h3>MongoDb</h3>
+                            <img src={ 'https://img.icons8.com/color/48/000000/bootstrap.png' } alt="" />
+                            <h3>BootStrap</h3>
                         </div>
                     </Card>
                     <Card>

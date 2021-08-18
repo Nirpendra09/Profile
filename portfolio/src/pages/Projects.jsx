@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { useScroll } from "../components/useScroll.jsx";
-import ScrollTop from "../components/ScrollTop";
 import {
     sliderContainer,
     slider,
@@ -29,11 +28,20 @@ const Projects = () => {
                 <motion.div variants={ lineAnim } className="line"></motion.div>
                 <a href="https://nirpendra09.github.io/GitProfileFetch.github.io/">
                     <Hide>
-                        <motion.img variants={ photoAnim } src='https://github.com/Nirpendra09/GitProfileFetch.github.io/raw/master/img/GitFetcher.JPG' alt="athlete" />
+                        <motion.img variants={ photoAnim } src='https://github.com/Nirpendra09/GitProfileFetch.github.io/raw/master/img/GitFetcher.JPG' alt="Git fetcher" />
                     </Hide>
                 </a>
             </Card>
-            <ScrollTop />
+
+            <Card ref={ element2 } variants={ fade } animate={ controls2 } initial="hidden">
+                <motion.h2 varinats={ fade } >Image Gallery</motion.h2>
+                <motion.div variants={ lineAnim } className="line"></motion.div>
+                <a href="https://csb-d3n4y.netlify.app/">
+                    <Hide>
+                        <motion.img variants={ photoAnim } src='https://user-images.githubusercontent.com/55339698/129843840-a8c43fcd-c212-40eb-8c39-ea18e9171ea0.png' alt="Image gallery" />
+                    </Hide>
+                </a>
+            </Card>
         </Project>
     )
 }
@@ -57,7 +65,7 @@ const Project = styled(motion.div)`
 `;
 
 const Card = styled(motion.div)`
-    padding: 10rem;
+    padding: 1rem;
     .line {
     height: 0.5rem;
     background: #23d997;
@@ -66,7 +74,7 @@ const Card = styled(motion.div)`
   }
     img{
         width: 100%;
-        height: 70vh;
+        height: auto;
         object-fit: contain;
     }
     @media (max-width: 768px){
